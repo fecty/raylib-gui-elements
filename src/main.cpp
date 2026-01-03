@@ -4,6 +4,7 @@
 #include <raymath.h>
 
 #include "definitions.hpp"
+#include "elements.hpp"
 
 int w = SCREEN_WIDTH;
 int h = SCREEN_HEIGHT;
@@ -44,6 +45,8 @@ int main()
 
     cout << "width: " << w << "\theight: " << h << "\n";
 
+    Checkbox box1(100, 100, 100, 300);
+
     while (!WindowShouldClose())
     {
 
@@ -60,6 +63,8 @@ int main()
         }
         else
             handleEvents();
+
+        box1.draw();
 
         // end
         EndDrawing();
